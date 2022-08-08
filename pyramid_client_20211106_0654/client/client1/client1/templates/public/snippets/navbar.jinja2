@@ -1,0 +1,22 @@
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+    <div class="container">
+        {% block navbar_logo %}
+        <a href="{{ request.route_url('home') }}" class="navbar-brand">
+            <img src="{{ request.url_for_static('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                 style="opacity: .8">
+            <span class="brand-text font-weight-light">AdminLTE 3</span>
+        </a>
+        {% endblock navbar_logo %}
+        {% block navbar_collpase %}
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% endblock navbar_collpase %}
+        {% block navbar_main %}
+            {% include 'public/snippets/navbar_main.jinja2' %}
+        {% endblock navbar_main %}
+        {% block navbar_right_links %}
+            {% include 'public/snippets/navbar_right_links.jinja2' %}
+        {% endblock navbar_right_links %}
+    </div>
+</nav>
